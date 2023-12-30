@@ -1,0 +1,60 @@
+body {
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    /* enabling flexbox */
+    display: flex;
+    /* flex-direction: row means everything goes from left to right and if it's column everything goes from top to bottom */
+    flex-direction: column;
+    /* 100vh means max height of window */
+    min-height: 100vh;
+}
+
+.main-content{
+    flex-grow: 1;
+    /* This means the main-content should take all left over space */
+}
+
+footer{
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header{
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1{
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+/* Targeting header.hbs anchor tag */
+header a{
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none; 
+    /* text-decoration none means it removes the underline part of anchor tag */
+}
+.portrait {
+    width: 250px;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
