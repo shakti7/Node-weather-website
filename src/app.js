@@ -5,12 +5,17 @@ const geocode = require('./utils/geocode')
 const Forecast = require('./utils/forecast')
 const request = require('request')
 const forecast = require('./utils/forecast')
+const cors = require('cors')
+require('dotenv').config();
 
 // console.log(__dirname)
 // console.log(path.join(__dirname,'../public'))
 
 
 const app = express()
+const port = process.env.PORT || 3000;
+
+app.use(cors());
 
 //Defines path for express config
 const publicDirectory = path.join(__dirname,'../public')
@@ -134,6 +139,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000, ()=>{
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}.`);
 })
